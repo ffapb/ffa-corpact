@@ -13,8 +13,10 @@ and have events populated from the django app and showing up automatically in th
 sudo pip3 install pew
 pew new --python=python3 -d -r requirements.txt CORPACT
 pew workon CORPACT
-./manage.py createsuperuser # ...
 ./manage.py migrate
+./manage.py createsuperuser # ...
 ./manage.py runserver 0.0.0.0:8888
 ```
 
+Then browse to http://localhost:8888/admin to manage the events
+or http://localhost:8888/latest/feed.ics for the subscribable calendar
